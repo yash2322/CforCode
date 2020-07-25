@@ -2,7 +2,6 @@ import React from 'react';
 import { observer } from 'mobx-react'
 import userStore from './store/userStore';
 import LoginForm from './LoginForm';
-import InputField from './InputField';
 import SubmitButton from './SubmitButton';
 import './App.css';
 
@@ -14,7 +13,7 @@ class App extends React.Component {
         method: 'post',
         headers: {
           'Accept': 'application/json',
-          'Content-type':'application/json'
+          'Content-Type':'application/json'
         }
       });
       let result = await res.json();
@@ -83,6 +82,7 @@ catch(err){
       return (
         <div className="app">
           <div className="container">
+            
             <LoginForm />
           </div>
         </div>
